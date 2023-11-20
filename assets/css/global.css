@@ -2,16 +2,31 @@
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
 }
+title{
+    text-transform: capitalize;
+}
+h1{
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+    background-image: url(../images/International_Pokémon_logo.svg.png);
+    background-repeat: no-repeat;
+    background-size: 10%; /* Isso faz com que a imagem cubra todo o elemento body */
+    background-position: center; /* Isso centraliza a imagem no body */
+    color: rgb(190, 190, 104);
+    
 
+}
 body {
-    background-color: #f6f8fc;
+    background-color:  #fafafa;
 }
 
 .content {
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-color:  #a01515;
+    ;
 }
 
 @media screen and (min-width: 992px) {

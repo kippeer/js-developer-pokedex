@@ -6,6 +6,24 @@
     list-style: none;
 }
 
+@keyframes blink {
+    0%, 50%, 100% {
+        opacity: 1;
+    }
+    25%, 75% {
+        opacity: 0;
+    }
+}
+
+
+
+
+.pokemon.blinking {
+    animation: blink 5s infinite;
+    animation-delay: 1.5s; /* Ajuste conforme necessário para o tempo de atraso desejado */
+}
+
+
 .normal {
     background-color: #a6a877;
 }

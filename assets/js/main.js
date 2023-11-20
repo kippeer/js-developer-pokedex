@@ -25,9 +25,19 @@ function convertPokemonToLi(pokemon) {
 
 function loadPokemonItens(offset, limit) {
     pokeApi.getPokemons(offset, limit).then((pokemons = []) => {
-        const newHtml = pokemons.map(convertPokemonToLi).join('')
-        pokemonList.innerHTML += newHtml
-    })
+        // Limpa o conteúdo anterior da lista
+        pokemonList.innerHTML = '';
+
+        // Adiciona a classe 'blinking' aos novos Pokémon
+        pokemons.forEach((pokemon) => {
+            const newHtml = convertPokemonToLi(pokemon);
+            const pokemonElement = document.createElement('li');
+            pokemonElement.className = 'pokemon blinking'; // Adiciona a classe 'blinking'
+            pokemonElement.innerHTML = newHtml;
+
+            pokemonList.appendChild(pokemonElement);
+        });
+    });
 }
 
 loadPokemonItens(offset, limit)
